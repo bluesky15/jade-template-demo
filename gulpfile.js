@@ -10,3 +10,9 @@ gulp.task('jade', function(){
     }))
     .pipe(gulp.dest('./dist'))
 })
+
+gulp.task('watch', function(){
+    gulp.watch('./src/*jade',['jade'])
+});
+
+gulp.task('default',['jade','watch']);
